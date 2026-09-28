@@ -160,7 +160,7 @@
 
     <!-- Product Shop Section -->
     <section id="shop" class="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-wood-800 pb-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-wood-800 pb-6">
             <div>
                 <span class="text-amber-accent text-xs font-bold tracking-widest uppercase">Artisan Woodcraft Catalog</span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-bold text-wood-50 mt-1">Featured Wooden Products</h2>
@@ -179,18 +179,6 @@
             </div>
         </div>
 
-        <span style="color: red; font-weight: bold;">
-        <!-- Category Selection Filter Buttons -->
-        <div class="flex flex-wrap gap-2 mb-8" id="categoryFilters">
-            <button onclick="filterProducts('All')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-amber-accent text-wood-950 transition-all shadow-sm">All Products</button>
-            <button onclick="filterProducts('Kitchen & Dining')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Kitchen & Dining</button>
-            <button onclick="filterProducts('Seasonal Decor')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Seasonal Decor</button>
-            <button onclick="filterProducts('Furniture')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Furniture</button>
-            <button onclick="filterProducts('Nautical & Planters')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Nautical & Planters</button>
-            <button onclick="filterProducts('Games')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Games</button>
-        </div>
-        </span>
-
         <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
@@ -199,7 +187,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-5 space-y-4">
-                    <span class="text-amber-accent text-xs font-bold tracking-widest uppercase"><i class="fa-solid fa-comments mr-1"></i> Custom Woodworking & Contact</span>
+                    <span class="text-amber-accent text-xs font-bold tracking-widest uppercase"><i class="fa-solid faA-comments mr-1"></i> Custom Woodworking & Contact</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-wood-50">Request a Custom Creation or Ask a Question</h2>
                     <p class="text-wood-300 text-sm leading-relaxed">
                         Have a unique size, specific grain preference, or custom engraving in mind? Send us a message directly and AJR Woodcraft will get back to you promptly.
@@ -496,8 +484,8 @@
             { id: 'prod-7', name: "Black Cat on Crescent Moon Live Edge Plaque", category: "Seasonal Decor", price: 55.00, rating: 5.0, reviews: 37, image: "Cat_on_moon.jpg", description: "Natural live-edge bark wood slab finished with harvest orange stain and intricate black cat silhouette.", woodType: "Natural Bark Slab" },
             { id: 'prod-8', name: "Nautical Wooden Boat Wall Planter", category: "Nautical & Planters", price: 85.00, rating: 4.9, reviews: 21, image: "Boat_planter.jpg", description: "Handcrafted flat-bottom wooden skiff planter finished in classic maritime colors with decorative rigging.", woodType: "Cedar & Pine" },
             { id: 'prod-9', name: "Candy Corn", category: "Seasonal Decor", price: 6.00, rating: 4.5, reviews: 20, image: "Candy_Corn.jpg", description: "Perfect for your holiday decor.", woodType: "Painted Pine" },
-            { id: 'prod-10', name: "Pumpkin Lantern", category: "Seasonal Decor", price: 35.00, rating: 4.9, reviews: 29, image: "Pumpkin_lantern.png", description: "Laser cut pumpkin lantern. Hand painted.", woodType: "Plywood" },
-            { id: 'prod-11', name: "Wooden Jack-O-Lantern", category: "Seasonal Decor", price: 35.00, rating: 4.8, reviews: 41, image: "Wooden_jack_o-lanterns.png", description: "Wooden Jack-O-Lantern with interchangeable faces, pumpkin, witch, or frank-n-stein. The price listed ships with one face (your choice - enter in the comments below). Each additional face is $10.00. The lantern without the face inserts is $25.00.", woodType: "Pine" }
+            { id: 'prod-10', name: "Pumpkin Lantern", category: "Seasonal Decor", price: 35.00, rating: 4.9, reviews: 29, image: "Pumpkin_lantern.png", description: "Laser cut pumpkin lantern. Hand painted.", woodType: "Plywood" } 
+            { id: 'prod-11', name: "Slatted Wooden Console Table", category: "Furniture", price: 245.00, rating: 5.0, reviews: 12, image: "Wall_light.jpg", description: "Custom 36-inch slatted console table featuring a central storage drawer and tapered legs.", woodType: "White Oak & Walnut" }
             ];
 
         let products = [];
@@ -531,25 +519,6 @@
             renderProducts(products);
             populateAdminDropdown();
         }
-
-        <span style="color: red; font-weight: bold;">
-        function filterProducts(category) {
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                if (btn.textContent.includes(category) || (category === 'All' && btn.textContent.includes('All Products'))) {
-                    btn.className = "category-btn px-4 py-2 rounded-lg text-xs font-bold bg-amber-accent text-wood-950 transition-all shadow-sm";
-                } else {
-                    btn.className = "category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all";
-                }
-            });
-
-            if (category === 'All') {
-                renderProducts(products);
-            } else {
-                const filtered = products.filter(p => p.category === category);
-                renderProducts(filtered);
-            }
-        }
-        </span>
 
         function toggleAdminModeManual() {
             isAdmin = !isAdmin;
@@ -831,7 +800,7 @@
                         </div>
 
                         <div class="text-xs text-wood-400 py-2 border-y border-wood-800">
-                            <strong>Wood Type:</strong> ${escapeHtml(product.woodType || 'Hardwood}')}'
+                            <strong>Wood Type:</strong> ${escapeHtml(product.woodType || 'Hardwood')}
                         </div>
                         <div class="flex items-center justify-between pt-2">
                             <span class="font-serif text-2xl font-bold text-amber-accent">$${parseFloat(product.price).toFixed(2)}</span>
