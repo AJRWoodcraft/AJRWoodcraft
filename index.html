@@ -760,7 +760,7 @@
 
         function handleCommissionSubmit(e) {
             e.preventDefault();
-            showToast("Custom commission inquiry sent successfully! Tony will reply soon.");
+            showToast("Custom commission inquiry sent successfully! AJR Woodcraft will reply soon.");
             e.target.reset();
         }
 
@@ -774,7 +774,7 @@
                 return;
             }
 
-            showToast(`Inquiry sent for "${product.name}". Tony will reply soon!`);
+            showToast(`Inquiry sent for "${product.name}". AJR Woodcraft will reply soon!`);
             emailInput.value = '';
             closeQuickView();
         }
@@ -797,7 +797,7 @@
                         <p class="text-xs text-wood-300 leading-relaxed">${escapeHtml(product.description || 'Handcrafted custom woodcraft.')}</p>
                         
                         <div class="pt-3 border-t border-wood-800 space-y-2">
-                            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-accent block"><i class="fa-solid fa-envelope mr-1"></i> Questions about this item? Ask Tony</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-accent block"><i class="fa-solid fa-envelope mr-1"></i> Questions about this item? Ask AJR Woodcraft</span>
                             <div class="flex gap-2">
                                 <input type="email" id="quickInquiryEmail-${product.id}" placeholder="Your email..." class="bg-wood-950 text-wood-100 text-xs rounded-lg border border-wood-700 px-3 py-2 flex-1 focus:outline-none focus:border-amber-accent">
                                 <button onclick="sendProductInquiry('${product.id}')" class="px-4 py-2 bg-wood-800 hover:bg-wood-700 text-amber-accent border border-wood-700 font-bold text-xs rounded-lg transition-all">Send</button>
