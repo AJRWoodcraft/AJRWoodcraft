@@ -789,10 +789,24 @@
         }
 
         function handleCommissionSubmit(e) {
-            e.preventDefault();
-            showToast("Custom commission inquiry sent successfully! AJR Woodcraft will reply soon.");
-            e.target.reset();
-        }
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+        showToast("Custom commission inquiry sent successfully! AJR Woodcraft will reply soon.");
+        form.reset();
+    })
+    .catch((error) => {
+        showToast("Error sending message. Please try again.", true);
+        console.error("Form submission error:", error);
+    });
+}
 
         function sendProductInquiry(productId) {
             const product = products.find(p => p.id === productId);
