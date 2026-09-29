@@ -179,6 +179,16 @@
             </div>
         </div>
 
+        <!-- Category Selection Filter Buttons -->
+        <div class="flex flex-wrap gap-2 mb-8" id="categoryFilters">
+            <button onclick="filterProducts('All')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-amber-accent text-wood-950 transition-all shadow-sm">All Products</button>
+            <button onclick="filterProducts('Kitchen & Dining')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Kitchen & Dining</button>
+            <button onclick="filterProducts('Seasonal Decor')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Seasonal Decor</button>
+            <button onclick="filterProducts('Furniture')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Furniture</button>
+            <button onclick="filterProducts('Nautical & Planters')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Nautical & Planters</button>
+            <button onclick="filterProducts('Games')" class="category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all">Games</button>
+        </div>
+
         <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
@@ -505,7 +515,8 @@
                 isAdmin = true;
                 localStorage.setItem('ajr_admin_active', 'true');
             } else {
-                isAdmin = localStorage.getItem('ajr_admin_active') === 'true';
+                isAdmin = false;
+                localStorage.removeItem('ajr_admin_active');
             }
 
             const saved = localStorage.getItem('ajr_woodcraft_products');
@@ -523,6 +534,23 @@
             applyAdminVisibility();
             renderProducts(products);
             populateAdminDropdown();
+        }
+
+        function filterProducts(category) {
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.textContent.includes(category) || (category === 'All' && btn.textContent.includes('All Products'))) {
+                    btn.className = "category-btn px-4 py-2 rounded-lg text-xs font-bold bg-amber-accent text-wood-950 transition-all shadow-sm";
+                } else {
+                    btn.className = "category-btn px-4 py-2 rounded-lg text-xs font-bold bg-wood-900 text-wood-300 hover:text-amber-accent border border-wood-700 transition-all";
+                }
+            });
+
+            if (category === 'All') {
+                renderProducts(products);
+            } else {
+                const filtered = products.filter(p => p.category === category);
+                renderProducts(filtered);
+            }
         }
 
         function toggleAdminModeManual() {
