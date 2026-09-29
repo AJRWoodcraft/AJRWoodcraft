@@ -228,27 +228,27 @@
                             <p class="text-xs text-wood-400">Fill out the form below and we'll reply to your email right away.</p>
                         </div>
                         <!-- Netlify Form Corrected for Native Submission -->
-                        <form name="custom-commission" method="POST" data-netlify="true" action="#" class="space-y-4">
-                            <input type="hidden" name="form-name" value="custom-commission" />
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-medium text-wood-300 mb-1">Your Name *</label>
-                                    <input type="text" name="name" required placeholder="Jane Doe" class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-medium text-wood-300 mb-1">Email Address *</label>
-                                    <input type="email" name="email" required placeholder="jane@example.com" class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-wood-300 mb-1">Project Details or Inquiry *</label>
-                                <textarea name="project_details" rows="4" required placeholder="Describe what you would like crafted or ask your question..." class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent"></textarea>
-                            </div>
-                            <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-amber-accent to-amber-600 text-wood-950 font-bold text-sm rounded-lg shadow-lg hover:brightness-110 transition-all flex items-center justify-center space-x-2">
-                                <i class="fa-solid fa-paper-plane"></i>
-                                <span>Send Message to AJR Woodcraft</span>
-                            </button>
-                        </form>   
+                        <form name="custom-commission" method="POST" data-netlify="true" onsubmit="handleCommissionSubmit(event)" class="space-y-4">
+    <input type="hidden" name="form-name" value="custom-commission" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+            <label class="block text-xs font-medium text-wood-300 mb-1">Your Name *</label>
+            <input type="text" name="name" required placeholder="Jane Doe" class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent">
+        </div>
+        <div>
+            <label class="block text-xs font-medium text-wood-300 mb-1">Email Address *</label>
+            <input type="email" name="email" required placeholder="jane@example.com" class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent">
+        </div>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-wood-300 mb-1">Project Details or Inquiry *</label>
+        <textarea name="project_details" rows="4" required placeholder="Describe what you would like crafted or ask your question..." class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent"></textarea>
+    </div>
+    <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-amber-accent to-amber-600 text-wood-950 font-bold text-sm rounded-lg shadow-lg hover:brightness-110 transition-all flex items-center justify-center space-x-2">
+        <i class="fa-solid fa-paper-plane"></i>
+        <span>Send Message to AJR Woodcraft</span>
+    </button>
+</form>  
                     </div>
                 </div>
             </div>
