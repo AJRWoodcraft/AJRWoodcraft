@@ -89,19 +89,12 @@
             background: #6E4F31;
         }
     </style>
-<div class="pt-2 border-t border-wood-800 flex items-center justify-between">
-    <span class="font-serif text-lg font-bold text-amber-accent">$${parseFloat(p.price).toFixed(2)}</span>
-    <!-- Insert your unique Stripe Buy Button tag here -->
-    <stripe-buy-button
-      pub-key="pk_live_your_key"
-      buy-button-id="${p.stripeButtonId || 'default_btn_id'}"
-    ></stripe-buy-button>
-</div></head>
+</head>
 <body class="wood-pattern min-h-screen flex flex-col antialiased">
 
     <!-- Top Merchant Bar -->
     <div id="topMerchantBar" class="admin-element hidden bg-wood-900 border-b border-wood-800 text-amber-accent/90 text-xs py-2 px-4 text-center font-medium tracking-wide flex justify-center items-center gap-2 flex-wrap">
-        <span><i class="fa-solid fa-wrench mr-1"></i> <strong>Store Manager Active:</strong> Upload photos, edit prices/descriptions, or add products anytime.</span>
+        <span><i class="fa-solid fa-wrench mr-1"></i> <strong>Store Manager Active:</strong> Upload photos, edit prices/descriptions, or add products anytime[cite: 1].</span>
         <button onclick="scrollToGuide()" class="underline text-amber-bright font-bold hover:text-white transition-colors ml-1">View Setup Guide</button>
         <button onclick="exitAdminMode()" class="ml-2 px-2.5 py-1 rounded bg-wood-800 hover:bg-wood-700 text-amber-bright hover:text-white font-bold text-[11px] border border-wood-700 transition-colors flex items-center gap-1 shadow-sm">
             <i class="fa-solid fa-eye-slash"></i> Exit Admin Mode
@@ -170,7 +163,7 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-wood-800 pb-6">
             <div>
                 <span class="text-amber-accent text-xs font-bold tracking-widest uppercase">Artisan Woodcraft Catalog</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-wood-50 mt-1">Featured Wooden Products</h2>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-wood-50 mt-1">Featured Wooden Products[cite: 1]</h2>
             </div>
             <div class="admin-element hidden flex items-center space-x-3">
                 <button onclick="exportCatalogData()" class="px-3 py-2 bg-wood-900 border border-wood-700 hover:border-amber-accent text-wood-300 hover:text-amber-accent rounded-lg text-xs font-semibold transition-all flex items-center gap-1.5">
@@ -205,24 +198,24 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-5 space-y-4">
                     <span class="text-amber-accent text-xs font-bold tracking-widest uppercase"><i class="fa-solid faA-comments mr-1"></i> Custom Woodworking & Contact</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-wood-50">Request a Custom Creation or Ask a Question</h2>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-wood-50">Request a Custom Creation or Ask a Question[cite: 1]</h2>
                     <p class="text-wood-300 text-sm leading-relaxed">
-                        Have a unique size, specific grain preference, or custom engraving in mind? Send us a message directly and AJR Woodcraft will get back to you promptly.
+                        Have a unique size, specific grain preference, or custom engraving in mind? Send us a message directly and AJR Woodcraft will get back to you promptly[cite: 1].
                     </p>
 
                     <div class="space-y-3 pt-2">
                         <div class="flex items-start space-x-3">
                             <i class="fa-solid fa-check text-amber-accent mt-1"></i>
                             <div>
-                                <h4 class="text-sm font-bold text-wood-200">Precision Laser Engraving</h4>
-                                <p class="text-xs text-wood-400">Personalize with family names, dates, or custom logos.</p>
+                                <h4 class="text-sm font-bold text-wood-200">Precision Laser Engraving[cite: 1]</h4>
+                                <p class="text-xs text-wood-400">Personalize with family names, dates, or custom logos[cite: 1].</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-3">
                             <i class="fa-solid fa-check text-amber-accent mt-1"></i>
                             <div>
-                                <h4 class="text-sm font-bold text-wood-200">Choice of Fine Hardwoods</h4>
-                                <p class="text-xs text-wood-400">Walnut, White Oak, Cherry, Hard Maple & Teak.</p>
+                                <h4 class="text-sm font-bold text-wood-200">Choice of Fine Hardwoods[cite: 1]</h4>
+                                <p class="text-xs text-wood-400">Walnut, White Oak, Cherry, Hard Maple & Teak[cite: 1].</p>
                             </div>
                         </div>
                     </div>
@@ -231,31 +224,31 @@
                 <div class="lg:col-span-7">
                     <div class="glass-panel p-6 sm:p-8 rounded-2xl shadow-2xl border border-amber-accent/30">
                         <div class="mb-4">
-                            <h3 class="font-serif text-lg font-bold text-wood-100">Direct Message / Commission Inquiry</h3>
-                            <p class="text-xs text-wood-400">Fill out the form below and we'll reply to your email right away.</p>
+                            <h3 class="font-serif text-lg font-bold text-wood-100">Direct Message / Commission Inquiry[cite: 1]</h3>
+                            <p class="text-xs text-wood-400">Fill out the form below and we'll reply to your email right away[cite: 1].</p>
                         </div>
                         <!-- Netlify Form Corrected for Native Submission -->
                         <form name="custom-commission" method="POST" data-netlify="true" onsubmit="handleCommissionSubmit(event)" class="space-y-4">
-    <input type="hidden" name="form-name" value="custom-commission" />
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-            <label class="block text-xs font-medium text-wood-300 mb-1">Your Name *</label>
-            <input type="text" name="name" required placeholder="Jane Doe" class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent">
-        </div>
-        <div>
-            <label class="block text-xs font-medium text-wood-300 mb-1">Email Address *</label>
-            <input type="email" name="email" required placeholder="jane@example.com" class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent">
-        </div>
-    </div>
-    <div>
-        <label class="block text-xs font-medium text-wood-300 mb-1">Project Details or Inquiry *</label>
-        <textarea name="project_details" rows="4" required placeholder="Describe what you would like crafted or ask your question..." class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent"></textarea>
-    </div>
-    <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-amber-accent to-amber-600 text-wood-950 font-bold text-sm rounded-lg shadow-lg hover:brightness-110 transition-all flex items-center justify-center space-x-2">
-        <i class="fa-solid fa-paper-plane"></i>
-        <span>Send Message to AJR Woodcraft</span>
-    </button>
-</form>  
+                            <input type="hidden" name="form-name" value="custom-commission" />
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-medium text-wood-300 mb-1">Your Name *</label>
+                                    <input type="text" name="name" required placeholder="Jane Doe" class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-wood-300 mb-1">Email Address *</label>
+                                    <input type="email" name="email" required placeholder="jane@example.com" class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-wood-300 mb-1">Project Details or Inquiry *</label>
+                                <textarea name="project_details" rows="4" required placeholder="Describe what you would like crafted or ask your question..." class="w-full bg-wood-950 text-wood-100 text-sm rounded-lg border border-wood-700 p-2.5 focus:outline-none focus:border-amber-accent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-amber-accent to-amber-600 text-wood-950 font-bold text-sm rounded-lg shadow-lg hover:brightness-110 transition-all flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Send Message to AJR Woodcraft</span>
+                            </button>
+                        </form>  
                     </div>
                 </div>
             </div>
@@ -495,7 +488,7 @@
     <!-- SCRIPT -->
     <script>
         const initialProducts = [
-            { id: 'prod-1', name: "The Art of Endurance End-Grain Butcher Block", category: "Kitchen & Dining", price: 195.00, rating: 5.0, reviews: 42, image: "Endgrain.jpg",stripeButtonId: "prod_VMaxiZRJjUVHpK", description: "Masterfully crafted for the modern epicure. Functional sculpture of beeswax-treated Red Oak and Walnut.", woodType: "Red Oak & Walnut" },
+            { id: 'prod-1', name: "The Art of Endurance End-Grain Butcher Block", category: "Kitchen & Dining", price: 195.00, rating: 5.0, reviews: 42, image: "Endgrain.jpg", stripeButtonId: "prod_VMaxiZRJjUVHpK", description: "Masterfully crafted for the modern epicure. Functional sculpture of beeswax-treated Red Oak and Walnut.", woodType: "Red Oak & Walnut" },
             { id: 'prod-4', name: "Halloween Decorative BOO Blocks", category: "Seasonal Decor", price: 36.00, rating: 5.0, reviews: 19, image: "BOO.jpg", description: "Hand-painted seasonal wooden block set spelling BOO with festive holiday accent colors.", woodType: "Solid Pine" },
             { id: 'prod-5', name: "Witch Silhouette Candy Dispenser Box", category: "Seasonal Decor", price: 68.00, rating: 4.9, reviews: 24, image: "Candy_box.jpg", description: "Handcrafted wooden trick-or-treat candy box featuring a laser-cut backlit witch silhouette inlay.", woodType: "Pine & Birch" },
             { id: 'prod-7', name: "Black Cat on Crescent Moon Live Edge Plaque", category: "Seasonal Decor", price: 55.00, rating: 5.0, reviews: 37, image: "Cat_on_moon.jpg", description: "Natural live-edge bark wood slab finished with harvest orange stain and intricate black cat silhouette.", woodType: "Natural Bark Slab" },
@@ -510,7 +503,7 @@
             { id: 'prod-16', name: "Cat on Pumpkin Canvas Engraving", category: "Seasonal Decor", price: 35.00, rating: 4.2, reviews: 14, image: "Cat_on_pumpkin.jpg", description: "This is a canvas engraved image of a black cat standing on a pumpkin.", woodType: "Canvas" },
             { id: 'prod-17', name: "36 x 16 x 24 Inch Cedar Planter", category: "Nautical & Planters", price: 125.00, rating: 4.9, reviews: 42, image: "Cedar Planters.jpg", description: "These planters are made of western cedar, are glued with Titebond III wood glue, and nailed with galvanized nails to witstand the weather.", woodType: "Cedar" },
             { id: 'prod-18', name: "6 ft Outdoor Boat Planter", category: "Nautical & Planters", price: 850.00, rating: 4.9, reviews: 12, image: "Oyster_boat.png", description: "This boat planter is perfect to display a large variety of flowers in your yard. It can be made to be water tight and painted with food safe paint to be used as a serving vessel for your party. The boat can be customized to your liking.", woodtype: "Pine and Walnut" },
-            ];
+        ];
 
         let products = [];
         let cart = [];
@@ -775,7 +768,7 @@
             showToast(`Saved changes for "${product.name}"!`);
         }
 
-    function resetAllImages() {
+        function resetAllImages() {
             localStorage.removeItem('ajr_woodcraft_products');
             localStorage.removeItem('ajr_woodcraft_banner');
             products = [...initialProducts];
@@ -796,24 +789,24 @@
         }
 
         function handleCommissionSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
 
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-    })
-    .then(() => {
-        showToast("Custom commission inquiry sent successfully! AJR Woodcraft will reply soon.");
-        form.reset();
-    })
-    .catch((error) => {
-        showToast("Error sending message. Please try again.", true);
-        console.error("Form submission error:", error);
-    });
-}
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                showToast("Custom commission inquiry sent successfully! AJR Woodcraft will reply soon.");
+                form.reset();
+            })
+            .catch((error) => {
+                showToast("Error sending message. Please try again.", true);
+                console.error("Form submission error:", error);
+            });
+        }
 
         function sendProductInquiry(productId) {
             const product = products.find(p => p.id === productId);
@@ -904,15 +897,16 @@
                         <div class="pt-2 border-t border-wood-800 flex items-center justify-between">
                             <span class="font-serif text-lg font-bold text-amber-accent">$${parseFloat(p.price).toFixed(2)}</span>
                             
-                            <!-- Direct Stripe Checkout Button -->
-                            <a href="${p.stripeUrl || 'https://buy.stripe.com/5kQ6oJfgA6jcbVE4ud0x200'}" target="_blank" class="bg-amber-accent text-wood-950 font-bold text-xs px-4 py-2 rounded-lg hover:bg-amber-400 transition-colors shadow-md">
-                                Buy Now
+                            <!-- Styled Stripe Checkout Button -->
+                            <a href="${p.stripeUrl || 'https://buy.stripe.com/5kQ6oJfgA6jcbVE4ud0x200'}" target="_blank" class="bg-amber-accent text-wood-950 hover:bg-amber-400 font-bold text-xs px-4 py-2 rounded-lg transition-all shadow-md flex items-center gap-1.5">
+                                <i class="fa-solid fa-cart-shopping text-[10px]"></i> Buy Now
                             </a>
                         </div>
                     </div>
                 </div>
             `).join('');
         }
+
         function showToast(msg, isError = false) {
             const toast = document.getElementById('toast');
             document.getElementById('toastMsg').textContent = msg;
