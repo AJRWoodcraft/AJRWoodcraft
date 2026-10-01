@@ -891,7 +891,7 @@
                             ${escapeHtml(p.category)}
                         </span>
                         <div class="absolute bottom-3 right-3 flex space-x-1">
-                            <button onclick="openQuickView('${p.id}')" title="Quick view details & ask question" class="bg-wood-950/90 text-wood-100 hover:text-amber-accent p-2 rounded-lg border border-wood-700 text-xs shadow-md">
+                            <button onclick="openQuickView('${p.id}')" title="Quick view details" class="bg-wood-950/90 text-wood-100 hover:text-amber-accent p-2 rounded-lg border border-wood-700 text-xs shadow-md">
                                 <i class="fa-solid fa-eye"></i>
                             </button>
                         </div>
@@ -903,6 +903,11 @@
                         </div>
                         <div class="pt-2 border-t border-wood-800 flex items-center justify-between">
                             <span class="font-serif text-lg font-bold text-amber-accent">$${parseFloat(p.price).toFixed(2)}</span>
+                            
+                            <!-- Direct Stripe Checkout Button -->
+                            <a href="${p.stripeUrl || 'https://buy.stripe.com/5kQ6oJfgA6jcbVE4ud0x200'}" target="_blank" class="bg-amber-accent text-wood-950 font-bold text-xs px-4 py-2 rounded-lg hover:bg-amber-400 transition-colors shadow-md">
+                                Buy Now
+                            </a>
                         </div>
                     </div>
                 </div>
