@@ -89,7 +89,14 @@
             background: #6E4F31;
         }
     </style>
-</head>
+<div class="pt-2 border-t border-wood-800 flex items-center justify-between">
+    <span class="font-serif text-lg font-bold text-amber-accent">$${parseFloat(p.price).toFixed(2)}</span>
+    <!-- Insert your unique Stripe Buy Button tag here -->
+    <stripe-buy-button
+      pub-key="pk_live_your_key"
+      buy-button-id="${p.stripeButtonId || 'default_btn_id'}"
+    ></stripe-buy-button>
+</div></head>
 <body class="wood-pattern min-h-screen flex flex-col antialiased">
 
     <!-- Top Merchant Bar -->
